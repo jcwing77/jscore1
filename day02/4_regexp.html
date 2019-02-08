@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+		var names=["明月","青天"];
+
+		var shi=
+			"窗前明月光,一行白鹭上青天,日照香炉生紫烟";
+		var reg=new RegExp(names.join("|"),"g");
+		var kwords=shi.match(reg);
+		console.log(kwords);
+	</script>
+ </body>
+</html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+		var target=new Date("2018/2/13");
+		//将target的时间，复制一个副本给start。
+		var start=new Date(target);
+		start.setDate(start.getDate()-30);
+		console.log("乘车时间:"+target);
+		console.log("购票时间:"+start);
+	</script>
+ </body>
+</html>

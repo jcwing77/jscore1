@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+	<script>
+		var str=
+		 "那天，我去了她家。我说:我Cao！你家真大!";
+		if(str.search(
+			/[我卧]\s*([草槽操艹]|cao)/i
+		)!=-1)
+			console.error("包含敏感词，禁止提交!");
+		else
+			console.log("文华说:"+str);
+	</script>	
+ </body>
+</html>

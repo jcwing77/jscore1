@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+var father={ bal:100000000, car:"infiniti" }
+function Student(sname,sage){
+	this.sname=sname;
+	this.sage=sage;
+}
+Student.prototype=father;
+Student.prototype.intr=function(){
+	console.log("I'm "+this.sname+", I'm "+this.sage);
+}
+Student.prototype.className="大一2班";
+var lilei=new Student("Li Lei",18);
+var hmm=new Student("hmm",19);
+
+//Object.setPrototypeOf(hmm,father);
+console.dir(hmm);
+console.log(hmm.bal,hmm.car);
+console.dir(lilei);
+console.log(lilei.bal,lilei.car);
+lilei.intr();
+hmm.intr();
+	</script>
+ </body>
+</html>

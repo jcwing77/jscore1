@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+		function ajax({type,url,data,dataType}){
+		            //{type:type,url:url,data:data,...}
+			console.log(type);
+			console.log(url);
+			console.log(data);
+			console.log(dataType);
+		}
+		ajax({type:"get",url:"xxx.php"});
+		ajax({
+			type:"post",
+			url:"xxx.php",
+			data:"id=1001",
+			dataType:"json"
+		});
+	</script>	
+ </body>
+</html>

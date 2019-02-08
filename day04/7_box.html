@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+		var n=345.678;
+		console.log(
+			n.toFixed(2)
+			//typeof n  number
+			//new Number(n).toFixed(2)
+			//345.68
+			//new Number()释放！
+		);//345.68
+
+		var s="张";
+		console.log(
+			s.charCodeAt()
+			//typeof s   string
+			//new String(s).charCodeAt()
+			//24352
+			//new String()释放！
+		);
+
+		var str="Hello";
+		str.len=10;
+		//typeof str   string
+		//new String(str).len=10
+		//new String()释放
+		console.log(
+			str.len
+			//typeof str   string
+			//new String(str).len => undefined
+		);//undefined
+	</script>	
+ </body>
+</html>

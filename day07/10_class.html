@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+	"use strict";
+class Flyer{
+	constructor(fname,speed){
+		this.fname=fname; 
+		this.speed=speed;
+	}
+	fly(){
+		console.log(
+			this.fname+"以时速"+this.speed+"飞行");
+	}
+}
+class Enemy extends Flyer{
+	constructor(fname,speed,score){
+		super(fname,speed);
+		this.score=score;
+	}
+	getScore(){
+		console.log(
+			"击落"+this.fname+"得"+this.score+"分");
+	}
+}
+
+var f16=new Enemy("F16",1000,10);
+f16.fly();
+f16.getScore();
+	</script>
+ </body>
+</html>

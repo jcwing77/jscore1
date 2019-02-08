@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+		var n=345.678;
+		var d=prompt("请输入小数位数");
+		if(d>=0&&d<=100){//try{
+			var result=n.toFixed(d);
+			document.write("执行结果:"+result+"<br>");
+		}else{//}catch(err){
+			alert("小数位数必须>0!");
+//			console.log(err);
+		}
+		document.write("程序继续正常执行...");
+	</script>
+ </body>
+</html>

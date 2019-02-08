@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+		var obj1={}, obj2=[1,2,3], obj3=new Date(), 
+		    obj4={};
+				obj4.__proto__=obj2;
+		//方法一: 判断爹:
+		console.log(
+			Array.prototype.isPrototypeOf(obj1),
+			Array.prototype.isPrototypeOf(obj2),
+			Array.prototype.isPrototypeOf(obj3),
+			Array.prototype.isPrototypeOf(obj4)
+		);
+		//方法二: 判断妈:
+		console.log(
+			obj1 instanceof Array,
+			obj2 instanceof Array,
+			obj3 instanceof Array,
+			obj4 instanceof Array
+		)
+//方法三: 验DNA:
+console.log(
+	Object.prototype.toString.call(obj1)==="[object Array]",
+	Object.prototype.toString.call(obj2)==="[object Array]",
+	Object.prototype.toString.call(obj3)==="[object Array]",
+	Object.prototype.toString.call(obj4)==="[object Array]"
+);
+//方法四: ES5
+console.log(
+	Array.isArray(obj1),
+	Array.isArray(obj2),
+	Array.isArray(obj3),
+	Array.isArray(obj4)
+);
+	</script>
+ </body>
+</html>

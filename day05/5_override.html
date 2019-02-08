@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+function Student(sname,sage){
+	this.sname=sname;
+	this.sage=sage;
+}
+Student.prototype.intr=function(){
+	console.log("I'm "+this.sname+", I'm "+this.sage);
+}
+Student.prototype.toString=function(){
+	var arr=[];
+	for(var key in this){
+		if(typeof this[key] !== "function")
+			arr.push(key+":"+this[key]);
+	}
+	return "{ "+arr.join(",")+" }";
+}
+Student.prototype.className="初一2班";
+var lilei=new Student("Li Lei",11);
+console.log(lilei.toString());
+	</script>
+ </body>
+</html>

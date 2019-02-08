@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+var eric={id:1001};
+(function(){
+	var _age=25;
+	//新增访问器属性age，保护现有数据属性_age
+	Object.defineProperty(eric,"age",{
+		get(){ return _age },
+		set(val){
+			if(val>=18&&val<=65)
+				_age=val;
+			else
+				throw new Error("年龄必须介于18~65之间");
+		},
+		enumerable:true,
+		configurable:false
+	})
+})();
+eric.age=26;
+console.log(eric);
+//eric.age=17;
+eric._age=-2;
+	</script>
+ </body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+		var reg=/^\d{6}$/;
+		do{
+			//请用户反复输入密码
+			var input=prompt("输入密码:(必须6位数字)")
+			//如果用reg检查密码格式不正确
+			if(!reg.test(input))
+				//就提示密码格式不正确
+				alert("密码格式不正确!");
+			else//否则	
+				break;//就退出循环
+		}while(true);
+		//提示验证通过!
+		document.write("验证通过!");
+	</script>
+ </body>
+</html>

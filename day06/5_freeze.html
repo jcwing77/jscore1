@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+"use strict";
+var dbconfig={
+	host:"localhost",
+	port:27017,
+	user:"root",
+	pwd:"123456"
+}
+Object.freeze(dbconfig);
+dbconfig.pwd="666666"
+console.log(
+	Object.getOwnPropertyDescriptor(dbconfig,"pwd")
+);
+	</script>
+ </body>
+</html>

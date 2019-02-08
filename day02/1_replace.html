@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+		function ltrim(str){
+			return str.replace(/^\s+/,"");
+		}
+		function rtrim(str){
+			return str.replace(/\s+$/,"");
+		}
+    function trim(str){
+			return str.replace(/^\s+|\s+$/g,"");
+		}
+		var str="   文    化     ";
+		console.log(ltrim(str));//"文    化     "
+		console.log(rtrim(str));//"   文    化"
+		console.log(trim(str));//"文    化"
+	</script>
+ </body>
+</html>

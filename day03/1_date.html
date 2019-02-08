@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+	<h1 id="show"></h1>
+  <script>
+		var now=new Date();
+		var birth=new Date("1983/12/26");
+		var days=parseInt(
+			(now.getTime()-birth.getTime())/1000/3600/24
+		);
+
+		var max=Number.MAX_VALUE;
+		console.log(max);
+		var years=max/1000/3600/24/365;
+		console.log(years);
+
+		function task(){
+			var target=new Date("2017/12/24 17:30");
+			var now=new Date();
+			var s=parseInt((target-now)/1000);
+			var d=parseInt(s/(3600*24));
+			var h=parseInt((s%(3600*24))/3600);
+			var m=parseInt((s%3600)/60);
+			var s=s%60;
+			show.innerHTML="距平安夜还有: "+d+"天"+ h+"小时"+m+"分"+s+"秒";
+		};
+
+		setInterval(task,1000)
+	</script>
+ </body>
+</html>

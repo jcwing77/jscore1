@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+		function round(num, d){
+			//将num* 10的d次方
+			num*=Math.pow(10,d);
+			//对num四舍五入取整
+			num=Math.round(num);
+			//将num/ 10的d次方
+			num/=Math.pow(10,d);
+			return num;
+		}
+		var n=345.678;
+		console.log(
+			round(n,2),//345.68
+			round(n,0),//346
+			round(n,-1)//350
+		);
+	</script>
+ </body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+		//东东:作者
+		function round(num,d){
+			if(!isNaN(num)&&!isNaN(d)){
+				num*=Math.pow(10,d);
+				num=Math.round(num);
+				return num/Math.pow(10,d);
+			}else{
+				throw new Error("孙子!!!必须输入数字!");
+			}
+		}
+		//文华:调用者
+		var num=prompt("请输入数字");
+		var d=prompt("请输入小数位数");
+		if(!isNaN(num)&&!isNaN(d)){//try{
+			var result=round(num,d);
+			document.write("执行结果:"+result+"<br>");
+		}else{//}catch(err){
+			alert("请您输入数字!");
+		}
+		document.write("程序继续执行...");
+	</script>	
+ </body>
+</html>

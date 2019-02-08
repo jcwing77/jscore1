@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+	<script>
+//如果?不包含trimLeft方法
+if(typeof String.prototype.trimLeft!=="function")
+	//在?添加trimLeft方法
+	String.prototype.trimLeft=function(){
+		document.write("调用自定义trimLeft方法<br>");
+		//删除当前字符串开头的空字符
+		return this.replace(/^\s+/,"");
+	}
+//如果?不包含trimRight方法
+if(typeof String.prototype.trimRight!=="function")
+	//在?添加trimRight方法
+	String.prototype.trimRight=function(){
+		document.write("调用自定义trimRight方法<br>");
+		//删除当前字符串结尾的空字符
+		return this.replace(/\s+$/,"");
+	}+
+//如果?不包含trim方法
+if(typeof String.prototype.trim!=="function")
+	//在?添加trim方法
+	String.prototype.trim=function(){
+		document.write("调用自定义trim方法<br>");
+		//删除当前字符串开头和结尾的空字符
+		return this.replace(/^\s+|\s+$/g,"");
+	}
+
+		var str="		zhang   dong   ";
+		//String.prototype.trimLeft,trimRight,trim
+		document.write("|"+str.trimLeft()+"<br>");
+		document.write("|"+str.trimRight()+"<br>");
+		document.write("|"+str.trim()+"<br>");
+	</script>
+ </body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+class User {
+	constructor(fullName,age){
+		this.fullName=fullName;
+		  //set fullName(fullName)
+		this.age=age;
+	}
+	//prototype
+	get age(){ return this._age; }
+	set age(val){
+		if(val>=18&&val<=65) this._age=val;
+		elsethrow new Error("年龄必须介于18~65之间")
+	}
+	get fullName(){
+		return this.firstName+"·"+this.lastName
+	}
+	set fullName(val){
+		[this.firstName,this.lastName]=val.split("·")
+	}
+}
+var lilei=new User("雷·李",25);
+console.log(lilei);
+	</script>
+ </body>
+</html>

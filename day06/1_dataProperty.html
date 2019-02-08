@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+"use strict";
+var eric={id:1001,ename:"恩里克",salary:12000};
+var attrs=
+	Object.getOwnPropertyDescriptor(eric,"id");
+console.log(attrs);
+
+Object.defineProperties(eric,{
+	id:{ writable:false, configurable:false },
+	ename:{ configurable:false },
+	salary:{ enumerable:false, configurable:false }
+})
+
+//Object.defineProperty(eric,"id",{
+//	writable:true, configurable:true
+//})
+//eric.id=1002;
+//delete eric.id;
+//delete eric.ename;
+for(var key in eric){
+	console.log(key+":"+eric[key]);
+}
+	</script>
+ </body>
+</html>

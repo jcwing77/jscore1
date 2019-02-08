@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+		#area{
+			width:250px; height:80px;
+			text-align:center; line-height:80px;
+			font-size: 1.5em;
+			background:Yellow; border:2px solid red;
+			cursor:pointer;		
+		}
+	</style>
+ </head>
+ <body>
+	<div id="area" onmouseout="out(this)" onmouseover="over(this)"></div>
+	   <!--style="background:#fff"-->
+  <script>
+		function over(div){
+			div.style.background="yellow";
+			div.innerHTML="";
+		}
+		function out(div){
+			div.style.background="#fff";
+			var r=Math.random();
+			div.innerHTML=
+				r<0.001?"一等奖:苹果笔记本":
+				r<0.01?"二等奖:蓝牙音箱":
+				r<0.1?"三等奖:国产耳机":
+							"参与奖:纸巾一包";
+		}
+	</script>	
+ </body>
+</html>

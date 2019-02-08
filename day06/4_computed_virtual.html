@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+var smith={ firstName:"约翰", lastName:"史密斯" };
+Object.defineProperty(smith,"fullName",{
+	get(){
+		return this.firstName+"·"+this.lastName
+	},
+	set(val){
+		var arr=val.split("·");
+		this.firstName=arr[0];
+		this.lastName=arr[1];
+	},
+	enumerable:true,
+	configurable:false
+})
+console.log(smith.fullName);
+smith.fullName="布拉德·皮特";
+console.log(smith);
+	</script>
+ </body>
+</html>

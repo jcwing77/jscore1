@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+		//lilei:
+		// sname:Li Lei
+		// sage:11
+		// 自我介绍: 输出"I'm Li Lei, I'm 11"
+		var lilei={
+			sname:"Li Lei",
+			sage:11,
+			intr:function(){
+				console.log("I'm "+this.sname+", I'm "+this.sage);
+			}
+		};
+		console.log(lilei.sage);
+		lilei.intr();
+		lilei.sage++;
+		console.log(lilei.sage);
+		lilei.intr();
+
+var hmm=new Object();
+hmm.sname="Han Meimei";
+hmm.sage=11;
+hmm.intr=function(){
+ console.log("I'm "+this.sname+", I'm "+this.sage);
+}
+hmm.intr();
+
+function clone(obj){
+	var newObj={};
+	for(var key in obj){ newObj[key]=obj[key]; }
+	return newObj;
+}
+var lileiCopy=clone(lilei);
+
+console.dir(lilei);
+console.dir(lileiCopy);
+console.log(lilei==lileiCopy);//false
+console.dir(hmm);
+	</script>
+ </body>
+</html>

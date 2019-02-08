@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+	<script>
+		var code = 'Es9d'
+		do {//反复
+			//请用户输入验证码
+			var input = prompt('请输入验证码:' + code)
+			//如果用户输入不正确
+			if(input.toLowerCase()
+					!== code.toLowerCase() )
+				//提示，验证码错误,请重试
+				alert('验证码错误,请重试')
+			else//否则
+				break//退出循环
+		}while(true)
+		//提示: 验证通过
+		document.write('<h1>验证通过!</h1>')
+	</script>
+ </body>
+</html>

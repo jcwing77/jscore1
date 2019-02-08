@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+		function calc(ename,base,...bonus){
+			var reduce=bonus.reduce(function(prev,elem){
+				return prev+elem
+			},base)
+			console.log(ename+"的总工资是:"+reduce);
+		}
+		calc("dongdong",15000,2000,3000,4000);
+
+		function calc2(base,bonus1,bonus2){
+			console.log(base+bonus1+bonus2);
+		}
+		var bonus=[2000,3000]
+		calc2(10000,...bonus);
+	</script>	
+ </body>
+</html>

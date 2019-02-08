@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+	"use strict";
+function Flyer(fname,speed){
+	this.fname=fname; this.speed=speed;
+}
+Flyer.prototype.fly=function(){
+console.log(this.fname+"以时速"+this.speed+"飞行");
+}
+function Enemy(fname,speed,score){
+	Flyer.call(this,fname,speed);
+	//Flyer(fname,speed);
+	//this.fname=fname
+	this.score=score;
+}
+Enemy.prototype.getScore=function(){
+console.log(
+	"击落"+this.fname+"得"+this.score+"分");
+}
+Object.setPrototypeOf(
+	Enemy.prototype, Flyer.prototype
+)
+var f16=new Enemy("F16",1000,10);
+f16.fly();
+f16.getScore();
+	</script>
+ </body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+		var lilei={
+			sname:"Li Lei",
+			sage:11,
+			address:{
+				city:"北京",
+				street:"万寿路"
+			}
+		}
+		//复制lilei 浅克隆
+		//var lileiClone=Object.assign({},lilei);
+		//为什么: for(var key in source){
+		            //to[key]=source[key] 只能复制地址
+		        //}
+		//深克隆
+		function deepClone(obj){
+			var json=JSON.stringify(obj);
+			var clone=JSON.parse(json);
+			return clone;
+		}
+		var lileiClone=deepClone(lilei);
+		console.log(lileiClone);
+		console.log(lileiClone==lilei);//false!
+		lilei.address.street="国贸";
+		console.log(lileiClone.address);
+		console.log(lileiClone.address==lilei.address);
+
+		
+
+	</script>
+ </body>
+</html>

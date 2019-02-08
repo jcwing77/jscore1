@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+		var str="No zuo no die,No can no bibi";
+		       //0      7     14     21
+					 // i
+		var i=-1;
+		do{
+			i=str.indexOf("no",i+1);
+			if(i!=-1)
+				console.log("在位置"+i+"发现no");
+			else
+				break;
+		}while(true);
+	</script>
+ </body>
+</html>

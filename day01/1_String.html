@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style></style>
+	</head>
+	<body>
+		<script>
+var pid = '130102198312262151'
+			 //012345678901234567
+			              //54321-
+var birth=pid.slice(6, -5+1);
+					 //.slice(6,6+6);
+
+           //.slice(6,13+1);
+           //.slice(6,pid.length-5+1);
+						 
+						        //pid.length-5+1
+				//选取6~13的子字符串
+				//规律: 如果两个参数都是下标
+					//含头不含尾(结尾位置+1)
+var gender = pid[pid.length-2]%2 == 1 ? '男' : '女'
+				 //固定套路: 
+					//pid[pid.length-1] 倒数第一个
+					//pid[pid.length-n] 倒数第n个
+//如果倒数第2位是奇数，就返回男，否则返回女
+console.log(birth, gender)
+				//19831226  男
+			
+		</script>
+	</body>
+</html>

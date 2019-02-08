@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+  <script>
+	"use strict";
+//鄙视: 如何在js中实现公有和私有属性(java)
+function Emp(id,ename,salary,age){
+	var _age;//用闭包模拟出私有属性的效果
+	Object.defineProperties(this,{
+		id:{
+			value:id,
+			writable:false,
+			enumerable:true
+		},
+		ename:{
+			value:ename,
+			writable:true,
+			enumerable:true
+		},
+		salary:{
+			value:salary,
+			writable:true,
+			enumerable:false
+		},
+		age:{
+			get(){ return _age;},
+			set(val){
+				if(val>=18&&val<=65)
+					_age=val;
+				else
+					throw new Error("年龄必须介于18~65之间");
+			},
+			enumerable:true
+		}
+	})
+	this.age=age;
+
+	//防篡改:
+	//Object.preventExtensions(this);
+	Object.seal();
+}
+var eric=new Emp(1001,"恩里克",12000,25);
+//Object.defineProperty(eric,"id",{
+//	writable:true, configurable:true
+//})
+//eric.id=1002;
+//delete eric.id;
+//delete eric.ename;
+//eric.age=-2;
+//for(var key in eric){
+//	console.log(key+":"+eric[key]);
+//}
+eric._age=-2;
+console.log(eric);
+	</script>
+ </body>
+</html>

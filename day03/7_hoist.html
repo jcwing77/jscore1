@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>声明提前hoist</title>
+  <style></style>
+ </head>
+ <body>
+  <script>//hoist
+
+
+		function fun(){console.log(1)};
+	//var fun=function(){...}
+		fun();//?
+		function fun(){console.log(2)};
+	//var fun=function(){...}
+		fun();//?
+	</script>
+ </body>
+</html>
